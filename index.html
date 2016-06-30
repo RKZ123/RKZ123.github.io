@@ -64,6 +64,92 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-transition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/06/30/transition/" class="article-date">
+  <time datetime="2016-06-30T11:08:07.000Z" itemprop="datePublished">2016-06-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/30/transition/">Transition</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="transition-过渡"><a href="#transition-过渡" class="headerlink" title="transition 过渡"></a>transition 过渡</h2><p>transition：all 0.5s ease-in-out 1s；</p>
+<p>上面四个属性为：</p>
+<p>all： transition-property执行过渡变化的属性 可以是width heigh等</p>
+<p>0.5s：transition-duration过渡变换延续的时间</p>
+<p>ease-in-out：transition-time-function过渡变换的速率效果方式</p>
+<p>1s：transition-delay换延迟时间</p>
+<h2 id="transform2D-变形"><a href="#transform2D-变形" class="headerlink" title="transform2D 变形"></a>transform2D 变形</h2><p>transform：rotate 旋转 | scale 缩放 | skew 扭曲 | translate 移动 | matrix 矩阵变形</p>
+<h3 id="rotate-旋转"><a href="#rotate-旋转" class="headerlink" title="rotate 旋转"></a>rotate 旋转</h3><p>通过指定的角度参数对原元素指定一个2D rotation（2D旋转）</p>
+<p>deg可为负数</p>
+<p>rotateX：元素围绕其X轴以给定的读书进行旋转 上下旋转 顺时针为正</p>
+<p>rotateY：元素围绕其Y轴以给定的读书进行旋转 左右旋转 顺时针为正</p>
+<p>rotateZ：元素围绕其Z轴以给定的读书进行旋转 平面旋转 </p>
+<p>例如 transform：rotateX(180deg);默认为Z轴</p>
+<h3 id="translate-移动"><a href="#translate-移动" class="headerlink" title="translate 移动"></a>translate 移动</h3><p>translate（xxpx，xxpx）水平方向和垂直方向同时移动</p>
+<p>translateX(xxpx) 仅水平方向移动</p>
+<p>translateY（xxpx）仅垂直方向移动</p>
+<p>xx可以负数</p>
+<p>例如：transform：translateX（12px）；</p>
+<h3 id="scale-缩放"><a href="#scale-缩放" class="headerlink" title="scale 缩放"></a>scale 缩放</h3><p>scale（xx，xx）使元素水平方向和垂直方向同时缩放</p>
+<p>scaleX（xx）元素仅水平方向缩放</p>
+<p>scaleY（xx）元素仅垂直方向缩放</p>
+<p>xx可以整数和小数</p>
+<p>例如：translate；scaleX(1.5)；</p>
+<h3 id="skew-扭曲"><a href="#skew-扭曲" class="headerlink" title="skew 扭曲"></a>skew 扭曲</h3><p>skew（xxdeg，xxdeg）使元素在水平和垂直方向同时扭曲变形</p>
+<p>skewX（xxdeg）仅使元素在水平方向扭曲变形</p>
+<p>skewY（xxdeg）仅使元素在垂直方向扭曲变形</p>
+<p>例如：translate：skew（12deg，12deg）；</p>
+<h3 id="transform-origin-元素的基点位置"><a href="#transform-origin-元素的基点位置" class="headerlink" title="transform-origin 元素的基点位置"></a>transform-origin 元素的基点位置</h3><p>认基点就是元素中心位置 </p>
+<p>transform-origin(xxpx xxpx xxpx)或者（xx% xx% xxpx）<br>分别为X Y Z轴<br>其中X和Y的值可以使百分比，em，px，方向</p>
+<p>###</p>
+<p>transform-style：嵌套元素如何在3D空间中呈现</p>
+<p>transform：flat|preserve-3d          </p>
+<p>flat默认，所有子元素在2D平面呈现 </p>
+<p>preserve-3d，所有资源在2D平面呈现，设置这个属性之后，就不能overflow：hidden</p>
+<p>perspective：视距，视角 设置查看者的位置</p>
+<p>当作舞台：多个变形元素的父节点</p>
+<p>例如：<figure class="highlight plain"><figcaption><span>class="shiju"></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	&lt;div class=&quot;wutai&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<pre><code class="shiju{perspective:xxxpx;}">.wutai{transform-style;preserve-3d;}
+</code></pre>
+<h2 id="Animation"><a href="#Animation" class="headerlink" title="Animation"></a>Animation</h2><p>animation-name 动画属性名</p>
+<p>@keyframes 动画关键帧</p>
+<p>from to</p>
+<p>百分比</p>
+<p>例如：@keyframes name{from{width：300px}to{width：600px}}<br>或者     @keyframes name{10%{}20%{}。。。100%{}}</p>
+<p>animation-duration 动画持续时间 单位秒</p>
+<h3 id="animation-timing-function-动画效果"><a href="#animation-timing-function-动画效果" class="headerlink" title="animation-timing-function 动画效果"></a>animation-timing-function 动画效果</h3><p>属性ease，linear，ease-in，ease-out,ease-in-out,cubic-bezier</p>
+<h3 id="animation-iteration-count-指定元素播放动画的循环次数"><a href="#animation-iteration-count-指定元素播放动画的循环次数" class="headerlink" title="animation-iteration-count 指定元素播放动画的循环次数"></a>animation-iteration-count 指定元素播放动画的循环次数</h3><p>infinite 无限 数字代表几次</p>
+<p>例如：animation-iteration-count:infinite/12;</p>
+<h3 id="animation-delay-指定元素动画开始时间"><a href="#animation-delay-指定元素动画开始时间" class="headerlink" title="animation-delay 指定元素动画开始时间"></a>animation-delay 指定元素动画开始时间</h3><p>默认值为normal，动画的每次循环都是向前播放  alternate，动画播放在第偶数次向前播放，第奇数次向反方向播放</p>
+<p>例如：animation-delay：alternate；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/06/30/transition/" data-id="ciq2b9ngt00036xr8589cuw2l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-meta标签" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/06/29/meta标签/" class="article-date">
@@ -101,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/29/meta标签/" data-id="ciq0v2poz00000lr8izduc6vc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/29/meta标签/" data-id="ciq2b9ngq00026xr8yjbq3tik" class="article-share-link">Share</a>
       
       
     </footer>
@@ -147,7 +233,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/29/html5语义话标签/" data-id="ciq0v2pph00010lr8io4ggjjk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/29/html5语义话标签/" data-id="ciq2b9ngn00016xr8smwq1yvc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +278,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/22/hello-world/" data-id="ciq0v2ppj00020lr89czn3otz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/22/hello-world/" data-id="ciq2b9ngi00006xr8uahoxxnm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,6 +316,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/06/30/transition/">Transition</a>
+          </li>
         
           <li>
             <a href="/2016/06/29/meta标签/">Meta标签</a>
